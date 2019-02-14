@@ -1,0 +1,550 @@
+@font-face {
+	font-family: 'Segoe UI';
+	src: url('fonts/Segoe UI.woff2') format('woff2'),
+	url('fonts/Segoe UI.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Segoe UI Semibold';
+	src: url('fonts/Segoe UI Semibold.woff2') format('woff2'),
+	url('fonts/Segoe UI Semibold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Segoe UI Light';
+	src: url('fonts/Segoe UI Light.woff2') format('woff2'),
+	url('fonts/Segoe UI Light.woff') format('woff');
+	font-weight: 100;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Segoe UI Bold';
+	src: url('fonts/Segoe UI Bold.woff2') format('woff2'),
+	url('fonts/Segoe UI Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+/* Общие стили */
+
+* {
+	padding: 0;
+	margin: 0;
+}
+html{
+	color: #fff;
+}
+a{
+	text-decoration: none;
+}
+a:active, a:focus { outline: none; }
+ol, ul {
+	list-style: none;
+}
+h1,h2,h3,h4{
+	font-family: 'Segoe UI Light', Arial, sans-serif;
+	text-transform: uppercase;
+}
+h2{
+	padding-top: 80px;
+}
+li{
+	font-family: 'Segoe UI Semibold', Arial, sans-serif;
+	text-transform: uppercase;
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+:root{
+	--main-color: #4bcaff;
+} 
+:root{
+	--main-color-second: #515f67;
+} 
+.wrapper{
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 0 19.63vw;
+}
+.heading{
+	font-size: 30px;
+	font-weight: 200;
+}
+.line{
+	width: 45px;
+	margin-bottom: 40px;
+	border: 0;
+	border-top: 3px solid #fff;
+}
+.line__dark{
+	border-top: 3px solid var(--main-color-second);
+}
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden{
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}                            
+
+/* Основное меню */
+
+.navbar{	
+	background-color: #4d5b64;
+	background: url(image/mainfoto.jpg) 0 0 no-repeat,#cccccc  ;
+	background-size: cover;
+	height: 800px;
+	text-align: center;
+}
+.cover{
+	height:150px;
+	background-color: #060c10;
+	opacity: 0.65;
+	margin-bottom: 250px;
+}
+.flexnavig{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding-top: 50px;
+}
+.logo{
+	font-family: 'Segoe UI Bold', Arial, sans-serif;
+	font-size: 30px;
+	text-transform: uppercase;
+}
+.logo>span{	
+	color: var(--main-color);
+}	
+.menu{
+	display: flex;
+	justify-content: space-between;
+	min-width: 27.74vw;
+	padding-top: 10px;
+}
+.menu>li{	
+	font-size: 14px;
+}
+.menu a{
+	padding: 10px 20px ;
+	border: solid 2px transparent ;
+	color: #fff;
+}
+
+.menu a:hover,
+.menu a:focus{
+	border:  2px solid var(--main-color) ;
+	color:var(--main-color) ;
+}
+.slogan{
+	font-family: 'Segoe UI Light', Arial, sans-serif;
+	font-size: 42px;
+	text-transform: uppercase;
+	line-height: 1.7;
+	background-color: #060c10;
+	opacity: 0.65;
+	display: inline;
+	padding: 0 20px;
+}
+
+/* Услуги */
+
+.services{
+	background-color: var(--main-color);
+	padding-bottom: 70px;
+}
+.cards{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.cards p{
+	font-size: 12px;
+	text-transform: none;
+	margin-bottom: 10px;
+}
+.card{
+	margin-right:30px ;
+	flex-basis: 270px;
+	line-height: 18px;
+}
+.card__header{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.card::before {
+	content: "";
+	display: block;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.card:last-child{
+	margin-right: 0;
+}
+.card__coffee::before{
+	content:url(image/coffee.png);
+}
+.card__instant::before{
+	content:url(image/instant.png);
+}
+.card__serious::before{
+	content:url(image/dslr.png);
+}
+.card__frame::before{
+	content:url(image/frame.png);
+}
+
+/* Портфолио */
+
+.portfolio{
+	color: var(--main-color-second);
+	padding-bottom: 50px;
+}
+.heading__portfolio{
+	padding-top: 0;
+}
+.portfolio hr{
+	padding-bottom: 40px;
+}
+.portfolio__navig{
+	padding-top: 80px;
+}
+.galerie{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.menu__galerie a{
+	color: var(--main-colorr-second);
+}
+.foto{
+	max-width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.container_foto{
+	width: 270px;
+	height: 270px;
+	margin-bottom: 30px;
+}
+
+.container_foto:focus,
+.container_foto:hover{
+	outline: 0;
+	outline-offset: 0;
+}
+.container_foto:hover::after,
+.container_foto:focus::after{
+	width: 70px;
+	height:70px;
+	padding: 100px;
+	position: absolute;
+	margin-left: -270px;
+	content: '+';
+	font-size: 50px;
+	font-weight: normal;
+	text-align: center;
+	background: rgba(30, 45, 57, 0.7);
+	color: #FFF;
+
+}
+
+/* Видео */
+
+.video{
+	font-family: 'Segoe UI', Arial, sans-serif;
+	font-size: 14px;
+	background-color: var(--main-color-second);
+	padding-bottom: 80px;
+}
+.wrapper__video{
+
+	display: flex;
+	justify-content: space-between;
+}
+.paragraf{
+	margin-bottom: 30px;
+	padding-right:130px ;
+}
+.button_video{
+	display: inline-block;
+	padding: 15px 40px;
+	background-color: var(--main-color-second);
+	border: 2px solid #2b3237;
+	text-transform: uppercase;
+	color: #2b3237;
+	font-family: 'Segoe UI Bold', Arial, sans-serif;
+	font-size: 14px;
+}
+.button_video:hover,
+.button_video:focus{
+	background-color: #2b3237;
+	opacity: 0.4;
+	color: #041018;
+}
+.movie{
+	width: 570px;
+	height: 315px;
+	margin-top: 80px;
+}
+
+/* Написать автору */
+
+.twitter{
+	font-family: 'Segoe UI Light', Arial, sans-serif;
+	font-size: 28px;
+	background-color:var(--main-color);
+	padding-bottom: 80px;
+}
+.twitter span{
+	font-family: 'Segoe UI Semibold', Arial, sans-serif;
+	cursor: pointer;
+}
+.twitter span:hover,
+.twitter span:focus{
+	color: var(--main-color-second);
+	outline: 0;
+	outline-offset: 0;
+}
+.heading__twitter{
+	position: relative;
+}
+.heading__twitter::after{
+	content: url(image/icon-twitter.png);
+	width:28px ;
+	height:22px ;
+	position: absolute;
+	left: 100%;
+}
+
+/* Соцсети */
+
+.social{
+	background-color: var(--main-color-second);
+	background-image: url(image/bgphoto.jpg);
+	background-size: cover;
+	height: 506px;
+	font-family: 'Segoe UI', Arial, sans-serif;
+	
+}
+.social p{
+	margin-bottom: 30px;
+	font-size: 14px;
+	line-height: 24px;
+}
+.social_flex{
+	display: flex;
+}
+.social_flex__left{
+	padding-right: 15px;
+}
+.social_flex__right{
+	padding-left: 15px;
+}
+.social_icons li{
+	display: inline-block;
+}
+.icon::after{
+	display: inline-block;
+	vertical-align: bottom;
+	box-sizing: border-box;
+	border: 2px solid white;
+	width: 65px;
+	height: 65px;
+	margin-right: 15px;
+}
+
+.twitter__icon::after{
+	content: url(image/icon-twitter.png);
+	padding: 20px 16px;
+}
+.google__icon::after{
+	content: url(image/icon-google.png);
+	padding: 19px 17px;
+}
+.dribble__icon::after{
+	content: url(image/icon-dribble.png);
+	padding: 19px 17px;
+}
+.coffee__icon::after{
+	content: url(image/icon-coffee.png);
+	padding: 19px 14px;
+}
+.icon:hover::after,
+.icon:focus::after{
+	border-color: var(--main-color);
+}
+
+/* Рекомендации */
+
+.testimonials{
+	color: var(--main-color-second);
+	margin-bottom: 80px;
+}
+.testimonials p{
+	font-family: 'Segoe UI Light', Arial, sans-serif;
+	font-size: 28px;
+	line-height: 50px;
+}
+p.signature{
+	font-family: 'Segoe UI Bold', Arial, sans-serif;
+	font-size: 14px;
+	line-height: 50px;
+	color: var(--main-color);
+}
+.heading__testimonials{
+	position: relative;
+}
+.heading__testimonials::after{
+	content: url(image/quates.png);
+	width:32px ;
+	height:26px ;
+	position: absolute;
+	left: 100%;
+}
+
+/* Контакты */
+
+.contact{
+	background-color: var(--main-color-second);
+	background-image: url(image/Layer1.jpg);
+	background-size: cover;
+	height: 814px;
+}
+.wrapper_form{
+	width: 40%;
+	float: left;
+}
+.contact_form input[type="text"],
+.contact_form input[type="email"]{
+	box-sizing: border-box;
+	width: 100%;
+	height: 60px;
+	background: rgba( 0,0,0,0);
+	border: 2px solid white;
+	color: white;
+	font-family: 'Segoe UI Light', Arial, sans-serif;
+	font-size: 28px;
+	margin-bottom: 40px;
+}
+
+.contact_form input[type="text"]:hover,
+.contact_form input[type="email"]:focus,
+.contact_form input[type="text"]:focus,
+.contact_form input[type="email"]:hover{
+	border: 2px solid var(--main-color);
+}
+.contact_message{
+	width: 100%;
+	background: rgba( 0,0,0,0);
+	border: 2px solid white;
+	color: white;
+	font-family: 'Segoe UI Light', Arial, sans-serif;
+	font-size: 28px;
+	height: 220px;
+	
+}
+.contact label{
+	font-family: 'Segoe UI Bold', Arial, sans-serif;
+	font-size: 14px;
+	line-height: 24px;
+	text-transform: uppercase;
+}
+.contact_text{
+	font-family: 'Segoe UI Bold', Arial, sans-serif;
+	font-size: 14px;
+	line-height: 24px;
+	box-sizing: border-box;
+	width: 49%;
+	float:right;
+	padding-top: 15px;
+}
+.contact_text p{
+	padding-bottom: 40px;
+}
+.message_text{
+	width: 100%;
+	clear: both;
+}
+.message_text textarea{
+	margin-bottom: 40px;
+}
+
+.message_text textarea:hover,
+.message_text textarea:focus{
+	border: 2px solid var(--main-color);
+}
+.message_text input[type="submit"]{
+	font-family: 'Segoe UI Bold', Arial, sans-serif;
+	font-size: 14px;
+	line-height: 24px;
+	color: white;
+	text-transform: uppercase;
+	border: none;
+	background-color: var(--main-color);
+	padding:20px 155px ;
+	margin-bottom: 80px;
+}
+
+.message_text input[type="submit"]:hover,
+.message_text input[type="submit"]:focus{
+	background-color: #0e2934;
+	opacity: 0.5;
+	color: var(--main-color);
+	outline: none;
+
+}
+.message_text input[type="submit"]::-moz-focus-inner {
+	border: 0;
+}
+
+/* Футер */
+
+.footer{
+	background-color: #222d35;
+	color: var(--main-color-second);
+}
+.footer_menu{
+	display: flex;
+	justify-content: space-between;
+	padding: 75px 0 80px 0;
+}
+.footer_menu ul{
+	display: flex;
+}
+
+.footer_menu a{
+	border:  2px solid transparent ;
+
+}
+.footer_menu li::after{
+	content: '|';
+}
+.footer_menu li:last-child::after{
+	content: '';
+}
+.footer_menu a{
+	color: var(--main-color-second);
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.footer_menu a:first-child{
+	padding-left: ;
+}
+.footer_menu a:hover,
+.footer_menu a:focus{
+	color: #0e1113;
+	
+}
+
